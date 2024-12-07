@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/chance": "^1.1.6",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@collabs/collabs": "^0.13.4",
+    "@collabs/tab-sync": "^0.13.4",
+    "chance": "^1.1.12"
+  }
+}
