@@ -2,202 +2,316 @@ RESULTADOS EXPERIMENTO DE PRUEBAS ALEATORIZADAS EN COLLABS
 PARA VERIFICAR CONSITENCIA EVENTUAL DE PROGRAMAS
 ============================================================
 Resultado correcto: false
-networkOrderBias: 1.5
-likehoodOfNetworkTick: 30
-true: 227
-false: 773
-networkOrderBias: 1.5
+networkOrderBias: 1
 likehoodOfNetworkTick: 40
-true: 259
-false: 741
-networkOrderBias: 1.5
+duración promedio: 78.556 ms
+true: 194
+false: 806
+networkOrderBias: 1
 likehoodOfNetworkTick: 50
-true: 396
-false: 604
-networkOrderBias: 1.5
-likehoodOfNetworkTick: 60
-true: 734
-false: 266
-networkOrderBias: 1.5
-likehoodOfNetworkTick: 70
-true: 930
-false: 70
-networkOrderBias: 1.5
-likehoodOfNetworkTick: 80
-true: 987
-false: 13
-networkOrderBias: 1.5
-likehoodOfNetworkTick: 90
-true: 999
-false: 1
-networkOrderBias: 2
-likehoodOfNetworkTick: 30
-true: 284
-false: 716
-networkOrderBias: 2
-likehoodOfNetworkTick: 40
+duración promedio: 6.77 ms
 true: 342
 false: 658
-networkOrderBias: 2
-likehoodOfNetworkTick: 50
-true: 472
-false: 528
-networkOrderBias: 2
+networkOrderBias: 1
 likehoodOfNetworkTick: 60
-true: 752
-false: 248
-networkOrderBias: 2
+duración promedio: 1.982 ms
+true: 721
+false: 279
+networkOrderBias: 1
 likehoodOfNetworkTick: 70
-true: 944
-false: 56
-networkOrderBias: 2
+duración promedio: 1.86 ms
+true: 911
+false: 89
+networkOrderBias: 1
 likehoodOfNetworkTick: 80
-true: 991
-false: 9
-networkOrderBias: 2
+duración promedio: 1.721 ms
+true: 989
+false: 11
+networkOrderBias: 1
 likehoodOfNetworkTick: 90
-true: 998
-false: 2
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 30
-true: 377
-false: 623
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 40
-true: 467
-false: 533
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 50
-true: 511
-false: 489
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 60
-true: 783
-false: 217
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 70
-true: 955
-false: 45
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 80
-true: 985
-false: 15
-networkOrderBias: 2.5
-likehoodOfNetworkTick: 90
-true: 1000
-false: 0
-networkOrderBias: 3
-likehoodOfNetworkTick: 30
-true: 436
-false: 564
-networkOrderBias: 3
-likehoodOfNetworkTick: 40
-true: 471
-false: 529
-networkOrderBias: 3
-likehoodOfNetworkTick: 50
-true: 555
-false: 445
-networkOrderBias: 3
-likehoodOfNetworkTick: 60
-true: 796
-false: 204
-networkOrderBias: 3
-likehoodOfNetworkTick: 70
-true: 943
-false: 57
-networkOrderBias: 3
-likehoodOfNetworkTick: 80
-true: 986
-false: 14
-networkOrderBias: 3
-likehoodOfNetworkTick: 90
-true: 998
-false: 2
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 30
-true: 454
-false: 546
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 40
-true: 504
-false: 496
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 50
-true: 591
-false: 409
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 60
-true: 779
-false: 221
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 70
-true: 948
-false: 52
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 80
-true: 992
-false: 8
-networkOrderBias: 3.5
-likehoodOfNetworkTick: 90
+duración promedio: 1.776 ms
 true: 999
 false: 1
-networkOrderBias: 4
+networkOrderBias: 1.5
+likehoodOfNetworkTick: 20
+duración promedio: 46.109 ms
+true: 192
+false: 808
+networkOrderBias: 1.5
 likehoodOfNetworkTick: 30
-true: 547
-false: 453
-networkOrderBias: 4
+duración promedio: 13.936 ms
+true: 218
+false: 782
+networkOrderBias: 1.5
 likehoodOfNetworkTick: 40
-true: 554
-false: 446
-networkOrderBias: 4
+duración promedio: 5.621 ms
+true: 222
+false: 778
+networkOrderBias: 1.5
 likehoodOfNetworkTick: 50
-true: 617
-false: 383
-networkOrderBias: 4
+duración promedio: 2.967 ms
+true: 376
+false: 624
+networkOrderBias: 1.5
 likehoodOfNetworkTick: 60
-true: 815
-false: 185
-networkOrderBias: 4
+duración promedio: 2.14 ms
+true: 763
+false: 237
+networkOrderBias: 1.5
 likehoodOfNetworkTick: 70
+duración promedio: 1.929 ms
+true: 933
+false: 67
+networkOrderBias: 1.5
+likehoodOfNetworkTick: 80
+duración promedio: 2.023 ms
+true: 990
+false: 10
+networkOrderBias: 1.5
+likehoodOfNetworkTick: 90
+duración promedio: 2.134 ms
+true: 997
+false: 3
+networkOrderBias: 2
+likehoodOfNetworkTick: 20
+duración promedio: 17.013 ms
+true: 289
+false: 711
+networkOrderBias: 2
+likehoodOfNetworkTick: 30
+duración promedio: 9.604 ms
+true: 328
+false: 672
+networkOrderBias: 2
+likehoodOfNetworkTick: 40
+duración promedio: 4.437 ms
+true: 338
+false: 662
+networkOrderBias: 2
+likehoodOfNetworkTick: 50
+duración promedio: 2.526 ms
+true: 467
+false: 533
+networkOrderBias: 2
+likehoodOfNetworkTick: 60
+duración promedio: 1.865 ms
+true: 754
+false: 246
+networkOrderBias: 2
+likehoodOfNetworkTick: 70
+duración promedio: 1.864 ms
 true: 934
 false: 66
-networkOrderBias: 4
+networkOrderBias: 2
 likehoodOfNetworkTick: 80
+duración promedio: 1.863 ms
+true: 994
+false: 6
+networkOrderBias: 2
+likehoodOfNetworkTick: 90
+duración promedio: 1.912 ms
+true: 996
+false: 4
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 20
+duración promedio: 9.804 ms
+true: 388
+false: 612
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 30
+duración promedio: 5.418 ms
+true: 390
+false: 610
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 40
+duración promedio: 3.602 ms
+true: 435
+false: 565
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 50
+duración promedio: 2.768 ms
+true: 538
+false: 462
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 60
+duración promedio: 2.147 ms
+true: 779
+false: 221
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 70
+duración promedio: 1.911 ms
+true: 940
+false: 60
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 80
+duración promedio: 2.051 ms
+true: 995
+false: 5
+networkOrderBias: 2.5
+likehoodOfNetworkTick: 90
+duración promedio: 1.871 ms
+true: 999
+false: 1
+networkOrderBias: 3
+likehoodOfNetworkTick: 20
+duración promedio: 8.319 ms
+true: 455
+false: 545
+networkOrderBias: 3
+likehoodOfNetworkTick: 30
+duración promedio: 4.481 ms
+true: 435
+false: 565
+networkOrderBias: 3
+likehoodOfNetworkTick: 40
+duración promedio: 2.933 ms
+true: 476
+false: 524
+networkOrderBias: 3
+likehoodOfNetworkTick: 50
+duración promedio: 2.293 ms
+true: 574
+false: 426
+networkOrderBias: 3
+likehoodOfNetworkTick: 60
+duración promedio: 1.869 ms
+true: 766
+false: 234
+networkOrderBias: 3
+likehoodOfNetworkTick: 70
+duración promedio: 1.877 ms
+true: 947
+false: 53
+networkOrderBias: 3
+likehoodOfNetworkTick: 80
+duración promedio: 1.84 ms
 true: 984
 false: 16
-networkOrderBias: 4
+networkOrderBias: 3
 likehoodOfNetworkTick: 90
+duración promedio: 1.863 ms
+true: 999
+false: 1
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 20
+duración promedio: 7.606 ms
+true: 472
+false: 528
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 30
+duración promedio: 4.164 ms
+true: 540
+false: 460
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 40
+duración promedio: 2.921 ms
+true: 517
+false: 483
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 50
+duración promedio: 2.175 ms
+true: 606
+false: 394
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 60
+duración promedio: 1.913 ms
+true: 776
+false: 224
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 70
+duración promedio: 1.789 ms
+true: 960
+false: 40
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 80
+duración promedio: 1.844 ms
+true: 988
+false: 12
+networkOrderBias: 3.5
+likehoodOfNetworkTick: 90
+duración promedio: 1.852 ms
 true: 1000
 false: 0
+networkOrderBias: 4
+likehoodOfNetworkTick: 20
+duración promedio: 6.75 ms
+true: 543
+false: 457
+networkOrderBias: 4
+likehoodOfNetworkTick: 30
+duración promedio: 3.95 ms
+true: 544
+false: 456
+networkOrderBias: 4
+likehoodOfNetworkTick: 40
+duración promedio: 2.788 ms
+true: 574
+false: 426
+networkOrderBias: 4
+likehoodOfNetworkTick: 50
+duración promedio: 2.212 ms
+true: 619
+false: 381
+networkOrderBias: 4
+likehoodOfNetworkTick: 60
+duración promedio: 1.813 ms
+true: 813
+false: 187
+networkOrderBias: 4
+likehoodOfNetworkTick: 70
+duración promedio: 2.124 ms
+true: 946
+false: 54
+networkOrderBias: 4
+likehoodOfNetworkTick: 80
+duración promedio: 1.854 ms
+true: 992
+false: 8
+networkOrderBias: 4
+likehoodOfNetworkTick: 90
+duración promedio: 1.803 ms
+true: 999
+false: 1
+networkOrderBias: 4.5
+likehoodOfNetworkTick: 20
+duración promedio: 6.157 ms
+true: 567
+false: 433
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 30
-true: 550
-false: 450
+duración promedio: 3.953 ms
+true: 577
+false: 423
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 40
-true: 611
-false: 389
+duración promedio: 2.735 ms
+true: 581
+false: 419
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 50
-true: 648
-false: 352
+duración promedio: 2.078 ms
+true: 624
+false: 376
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 60
-true: 800
-false: 200
+duración promedio: 1.867 ms
+true: 823
+false: 177
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 70
-true: 964
-false: 36
+duración promedio: 1.871 ms
+true: 957
+false: 43
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 80
-true: 985
-false: 15
+duración promedio: 1.786 ms
+true: 979
+false: 21
 networkOrderBias: 4.5
 likehoodOfNetworkTick: 90
+duración promedio: 1.787 ms
 true: 999
 false: 1
 Mejor networkOrderBias: 1.5
 Mejor likehoodOfNetworkTick: 30
-Mejor número de falsos: 773
+Mejor número de falsos: 808
