@@ -75,8 +75,8 @@ export class RandomizedTestingNetwork extends EventEmitter<RandomizedTestingNetw
       this.chance = new Chance.Chance(options.seed);
     else
       this.chance = new Chance.Chance();
-    this.networkOrderBias = options.networkOrderBias ?? 2;
-    this.likehoodOfNetworkTick = options.likehoodOfNetworkTick ?? 50;
+    this.networkOrderBias = options.networkOrderBias ?? 1.5;
+    this.likehoodOfNetworkTick = options.likehoodOfNetworkTick ?? 30;
     this.showCommandLog = options.showCommandLog ?? true;
     this.showNetworkLog = options.showNetworkLog ?? true;
   }
