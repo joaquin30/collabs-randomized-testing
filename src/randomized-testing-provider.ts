@@ -6,10 +6,17 @@ type Command = (chance: Chance.Chance) => [boolean, string];
 type Doc = AbstractDoc | CRuntime;
 type Message = {
   from: Doc,
-  to: Doc;
-  updateID: number;
-  updateType: "message" | "savedState";
-  update: Uint8Array;
+  to: Doc,
+  updateID: number,
+  updateType: "message" | "savedState",
+  update: Uint8Array,
+};
+type Options = {
+  seed?: string,
+  networkOrderBias?: number,
+  likehoodOfNetworkTick?: number,
+  showCommandLog?: boolean,
+  showNetworkLog?: boolean,
 };
 
 function printMessage(message: Message) {
@@ -44,8 +51,12 @@ export class RandomizedTestingNetwork extends EventEmitter<RandomizedTestingNetw
   private readonly commandByDocs = new Map<Doc, Command | undefined>();
   private readonly messages: Message[] = [];
   private closed = false;
-  private assertions = 0;
   private updateID = 0;
+  private readonly chance: Chance.Chance;
+  private readonly networkOrderBias: number; 
+  private readonly likehoodOfNetworkTick: number; 
+  private readonly showCommandLog: boolean; 
+  private readonly showNetworkLog: boolean; 
 
   /**
    * Constructs a TabSyncNetwork.
@@ -58,8 +69,16 @@ export class RandomizedTestingNetwork extends EventEmitter<RandomizedTestingNetw
    * @param options.allUpdates Set to true to forward all doc updates over
    * the BroadcastChannel, not just local operations.
    */
-  constructor() {
+  constructor(options: Options = {}) {
     super();
+    if (options.seed !== undefined)
+      this.chance = new Chance.Chance(options.seed);
+    else
+      this.chance = new Chance.Chance();
+    this.networkOrderBias = options.networkOrderBias ?? 2;
+    this.likehoodOfNetworkTick = options.likehoodOfNetworkTick ?? 50;
+    this.showCommandLog = options.showCommandLog ?? true;
+    this.showNetworkLog = options.showNetworkLog ?? true;
   }
 
   /**
@@ -93,7 +112,7 @@ export class RandomizedTestingNetwork extends EventEmitter<RandomizedTestingNetw
           this.updateID++;
         }
       }
-    })
+    });
   }
 
   private runCommand(chance: Chance.Chance) {
@@ -101,36 +120,36 @@ export class RandomizedTestingNetwork extends EventEmitter<RandomizedTestingNetw
     const doc = this.docsWithCommands[i];
     const command = this.commandByDocs.get(doc)!;
     const result = command(chance);
-    // console.log(result);
-    if (result[1].length > 0)
-      console.log(`Replica ${doc.replicaID}: ${result[1]}`);
     if (result[0])
       this.docsWithCommands.splice(i, 1);
+    if (this.showCommandLog && result[1].length > 0)
+      console.log(`Replica ${doc.replicaID}: ${result[1]}`);
   }
 
-  private tickNetwork(chance: Chance.Chance) {
+  private networkTick(chance: Chance.Chance) {
     const n = this.messages.length;
     if (n === 0)
       return;
-    const i = chance.natural({min: 0, max: n-1});
+    const x = Math.pow(chance.floating({min: 0, max: 1}), this.networkOrderBias);
+    const i = Math.max(0, Math.min(Math.floor(x*n), n-1));
     if (this.messages[i].updateType === 'savedState')
       this.messages[i].to.load(this.messages[i].update);
     else
       this.messages[i].to.receive(this.messages[i].update);
-    printMessage(this.messages[i]);
+    if (this.showNetworkLog)
+      printMessage(this.messages[i]);
     this.messages.splice(i, 1);
   }
 
-  run(options?: any) {
+  run() {
     if (this.closed)
       throw new Error("Test already closed");
     this.closed = true;
-    const chance = Chance.Chance();
     while (this.docsWithCommands.length > 0) {
-      if (chance.bool())
-        this.runCommand(chance);
+      if (this.chance.bool({likelihood: this.likehoodOfNetworkTick}))
+        this.networkTick(this.chance);
       else
-        this.tickNetwork(chance);
+        this.runCommand(this.chance);
     }
   }
 }

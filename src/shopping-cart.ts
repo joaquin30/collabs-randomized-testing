@@ -9,7 +9,7 @@ export class ShoppingCart extends AbstractDoc {
     super(options);
     this.items = this.runtime.registerCollab("items", (init) => new CValueSet(init));
     this.count = this.runtime.registerCollab("count", (init) => new CCounter(init));
-    this.numOps = this.runtime.registerCollab("numOps", (init) => new CVar(init, 0));
+    this.numOps = this.runtime.registerCollab("numOps", (init) => new CVar(init, -1));
   }
 
   add(item: string) {
@@ -30,18 +30,19 @@ export class ShoppingCart extends AbstractDoc {
     });
   }
 
-  close() {
+  close(): boolean {
+    if (this.count.value === 0) 
+      return false;
     if (this.isClosed())
       throw new Error("ShoppingCart is closed");
     this.runtime.transact(() => {
       this.numOps.set(this.count.value);
     });
-    //console.log("close() " + this.replicaID + ": " + this.numOps.value + " " + this.count.value);
+    return true;
   }
 
   isClosed(): boolean {
-    //console.log("isClosed() " + this.replicaID + ": " + this.numOps.value + " " + this.count.value);
-    return this.numOps.value > 0 && this.count.value >= this.numOps.value;
+    return this.numOps.value >= 0 && this.count.value >= this.numOps.value;
   }
 
   getList(): string[] {
