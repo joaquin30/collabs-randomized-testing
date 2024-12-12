@@ -1,4 +1,4 @@
-# Implementacion de "Verificación de consistencia eventual en programas que utilicen CRDTs mediante pruebas aleatorizadas"
+# Implementación de "Verificación de consistencia eventual en programas que utilicen CRDTs mediante pruebas aleatorizadas"
 
 Para correr el experimento se requiere NodeJS y ejecutar los siguientes comandos:
 

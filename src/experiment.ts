@@ -16,7 +16,7 @@ for (let i of deliveryLikehood) {
       if (result) numTrue++;
     }
     tests.push({
-      "iterations": iterations, // añadido para mas información
+      "iterations": iterations, // añadido para más información
       "deliveryLikehood": i, // era likehoodOfNetworkBias
       "deliveryOrderBias": j, // era networkOrderBias
       "durations": durations,
