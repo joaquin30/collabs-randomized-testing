@@ -21,24 +21,21 @@ export class ShoppingCart extends AbstractDoc {
     });
   }
 
-  delete(item: string) {
+  remove(item: string) {
     if (this.isClosed())
-      throw new Error("ShoppingCart is closed");
+      return;
     this.runtime.transact(() => {
       this.items.delete(item);
       this.count.add(1);
     });
   }
 
-  close(): boolean {
-    if (this.count.value === 0) 
-      return false;
+  close(): void {
     if (this.isClosed())
       throw new Error("ShoppingCart is closed");
     this.runtime.transact(() => {
       this.numOps.set(this.count.value);
     });
-    return true;
   }
 
   isClosed(): boolean {
