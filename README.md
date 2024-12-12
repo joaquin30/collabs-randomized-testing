@@ -1,11 +1,17 @@
-# Implementación de "Verificación de consistencia eventual en programas que utilicen CRDTs mediante pruebas aleatorizadas"
+# Collabs provider for random testing
 
-Para correr el experimento se requiere NodeJS y ejecutar los siguientes comandos:
+This is a demo of a provider for random testing Collabs documents in one machine.
+The test propagates local updates to all suscribed documents in random order,
+to test eventual consistency of actions, events and queries in the documents.
 
+An example for its use is in the file `src/shopping-cart.test.ts`. The program consist
+on a shopping cart that two users update concurrently, and a third node should get the
+final shopping list for payment processing. The test checks whether the list of items of the
+client who closes the shopping is the same of the payment system.
+
+To run the example:
 ```
 npm install
 npx tsc
-node dist/experiment.js
+node dist/main.js
 ```
-
-El experimento no es determinístico así que los valores varían un poco. Los resultados originales se encuentran en el archivo `results.json`. El formato de los experimentos ha cambiado y la explicación del nuevo formato se encuentra en `src/experiment.ts`.

@@ -1,5 +1,10 @@
 import { runTest } from "./shopping-cart.test"
 
+/** 
+ * The goal of this experiment is to empirically measure the
+ * effectiveness of RandomTestNetwork along with its performance
+ */
+
 const deliveryOrderBias: number[] = [1, 1.5, 2, 2.5, 3];
 const deliveryLikehood: number[] = [30, 40, 50, 60, 70];
 const iterations = 1000;
@@ -16,11 +21,10 @@ for (let i of deliveryLikehood) {
       if (result) numTrue++;
     }
     tests.push({
-      "iterations": iterations, // añadido para más información
-      "deliveryLikehood": i, // era likehoodOfNetworkBias
-      "deliveryOrderBias": j, // era networkOrderBias
+      "iterations": iterations,
+      "deliveryLikehood": i,
+      "deliveryOrderBias": j,
       "durations": durations,
-      // eran percentageOfFalsePositives
       "numTrue": numTrue,
       "numFalse": iterations - numTrue,
     });

@@ -90,8 +90,7 @@ export class RandomTestNetwork<T extends Doc> extends EventEmitter<RandomTestNet
 
   /**
    * Subscribes `doc` to send and receive updates for all other documents
-   * in the RandomTestNetwork. It will also sync initial states with
-   * other documents, to ensure that they start up-to-date.
+   * in the RandomTestNetwork.
    *
    * @param doc The document to subscribe.
    * @param stateMachine A RandomTestStateMachine instance of `doc`, or undefined if `doc` will not run commands.
